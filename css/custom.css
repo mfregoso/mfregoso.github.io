@@ -131,8 +131,12 @@ span.linkarrow {position: relative; left: -1rem;}
   span.linkarrow {position: relative; left: -2.1rem;}
 }
 
-/* list small indent */
+/* list small indentation */
 .lsin {padding: 0 0 0 0.2rem;}
+.lsin li {list-style: none;}
+.lsin ul li {text-indent: -1.4rem; padding-left: 1.4rem;} /* indent wrapped text:: check on mobile */
+
+#neg {position: absolute; top: -500px;}
 
 .footer {
 background-color: #EDE5E5;
