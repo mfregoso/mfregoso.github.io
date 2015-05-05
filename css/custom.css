@@ -28,9 +28,8 @@ svg.t5 {fill: #FFFFFF;}
 .trans5 {background-color: #333333;}
 
 /* General Links */
-a {color: #f3f3f3; text-decoration: none;}
-a:link, a:visited, a:active { color: #f3f3f3; text-decoration: none; }
-a:hover { color: #f3f3f3; text-decoration: underline; }
+a, a:link, a:visited, a:active {color: #f3f3f3; text-decoration: none;}
+a:hover {color: #f3f3f3; text-decoration: underline; }
 
 /* Inverse link decoration */
 .inverse:link {text-decoration: underline;}
@@ -46,33 +45,33 @@ a:hover { color: #f3f3f3; text-decoration: underline; }
 #menu {display: none;}
 
 @media (min-width: 750px) {
-	#menu {
-	  display: block;
-	  position: fixed;
-	  min-width: 500px;
-	  left: 0%;
-	  top: 0;
-	  width: 100%;
-	  height: 34px;
-	  line-height: 34px;
-	  padding-top: 6px;
-	  padding-bottom: 6px;
-	  margin: 0 auto;
-	  text-align: center;
-	  background-color: rgba(55, 55, 55, 0.95); /* 55,55,55/0.95 */
-	  border-bottom: solid 3px;
-	  border-top: solid 3px;
-	  border-color: black;
-	  font-size: 20px;
-	  font-weight: 550;
-	  letter-spacing: 0.1rem;
-	  color: white;
-	  z-index: 100;}
+#menu {
+  display: block;
+  position: fixed;
+  min-width: 500px;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(55, 55, 55, 0.95); /* 55,55,55/0.95 */
+  border-bottom: solid 3px;
+  border-top: solid 3px;
+  border-color: black;
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: 0.1rem;
+  color: white;
+  z-index: 100;}
 }
 
-/* MENU LINKS :: OLD = width: 120px; padding: 0; */
-.mlink {
-color: white;
+/* FORMERLY .mlink (class for a:) OLD = width: 120px; padding: 0; */
+#menu a {
+color: #f3f3f3;
 line-height: 34px;
 display: inline-block;
 text-align: center;
@@ -83,7 +82,7 @@ margin: 0 auto;
 text-decoration: none;
 }
 
-.mlink:hover {
+#menu a:hover {
 color: black;
 background-color: white;
 border-radius: 10px;
@@ -124,18 +123,18 @@ h4.contact {font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 
 /* responsive ARROW size & position */
 img.linkarrow {padding-right: 2px; width: 1rem; height: 1rem;}
-span.linkarrow {position: relative; left: -1rem;}
+span.linkarrow {position: relative; left: -1.1rem;}
 @media (min-width: 750px) {
   img.linkarrow  {
-	padding-right: 4px; width: 1.6rem; height: 1.6rem; position: relative; bottom: -0.1rem;}
-  span.linkarrow {position: relative; left: -2.1rem;}
+	padding-right: 3px; width: 1.6rem; height: 1.6rem; position: relative; bottom: -0.1rem;}
+  span.linkarrow {position: relative; left: -1.9rem;}
 }
 
 /* list small indentation */
 .lsin {padding: 0 0 0 0.2rem;}
 .lsin li {list-style: none;}
 .lsin ul li {text-indent: -1.1rem; padding-left: 1.1rem;} /* indent wrapped text:: check on mobile */
-@media (min-width: 550px) {
+@media (min-width: 750px) {
 	.lsin ul li {text-indent: -1.4rem; padding-left: 1.4rem;}
 }
 #neg {position: absolute; top: -500px;}
