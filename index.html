@@ -12,58 +12,6 @@
 <link rel="stylesheet" href="css/custom.css">
 <link rel="stylesheet" href="jsbox/jquery.fancybox.css" type="text/css" media="screen">
 
-<script src="jquery.js"></script>
-<script type="text/javascript" src="jsbox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-/** code for auto-scrolling links **/
-$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 600, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
-});
-
-/** click-expand **/
-$(document).ready(function() {
-$('.answer').hide();
-$('.expand .question').click(function(){
-$(this).next('.answer').slideToggle(500);
-$(this).toggleClass('close');
-/* },
-function(){
-$(this).next('.answer').slideDown();
-$(this).removeclass('close');*/
-}
-);
-});
-
-/** start fancybox **/
-$(document).ready(function() {
-	$(".fancybox").fancybox();
-});
-$(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
-	});
-});
-</script>
-
 </head>
 <body id="home">
 
@@ -73,7 +21,7 @@ $(document).ready(function() {
 <a href="#education" title="Education">Education</a>
 <a href="#skills" title="Skills">Skills</a>
 <a href="#technology" title="Technology">Technology</a>
-<a href="#aboutme" title="So Why Me?">So Why Me?</a>
+<a href="#whyme" title="Why Me?">Why Me?</a>
 </div>
 
 <div id="spacer" class="s0"></div>
@@ -218,7 +166,7 @@ Along the way I have become experienced in routine computer-issue problem-solvin
 	</div>
 </div>
 
-<div class="trans trans4" id="aboutme">
+<div class="trans trans4" id="whyme">
 <svg class="t3" width="58px" height="24px"><polygon points="0,0 58,0 29,24"/></svg>
 </div>
 
@@ -226,7 +174,7 @@ Along the way I have become experienced in routine computer-issue problem-solvin
 	<div class="container">
 		<section>
 
-<h2 class="title">I learn quickly and efficiently</h2><br>
+<h2 class="title">So Why Me?</h2><br>
 
 <div class="expand">
 	<span class="question big">HTML, CSS, SVG design</span>
@@ -273,6 +221,59 @@ I live by "measure thrice, cut once." It may slow down, but I am exacting.
 	</div>
 </div>
 
+<div class="footer">Copyright 2015 by <b>Miguel Fregoso</b></div>
+
+<script src="jquery.js"></script>
+<script type="text/javascript" src="jsbox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+/** code for auto-scrolling links **/
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 600, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+/** click-expand **/
+$(document).ready(function() {
+$('.answer').hide();
+$('.expand .question').click(function(){
+$(this).next('.answer').slideToggle(500);
+$(this).toggleClass('close');
+/* },
+function(){
+$(this).next('.answer').slideDown();
+$(this).removeclass('close');*/
+}
+);
+});
+
+/** start fancybox **/
+$(document).ready(function() {
+	$(".fancybox").fancybox();
+});
+$(document).ready(function() {
+	$(".various").fancybox({
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: true,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -283,5 +284,4 @@ I live by "measure thrice, cut once." It may slow down, but I am exacting.
   ga('send', 'pageview');
 
 </script>
-<div class="footer">Copyright 2015 by <b>Miguel Fregoso</b></div>
 </body></html>
