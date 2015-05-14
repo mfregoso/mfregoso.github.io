@@ -10,7 +10,7 @@
 
 <link rel="stylesheet" href="css/skeleton.css">
 <link rel="stylesheet" href="css/custom.css">
-<link rel="stylesheet" href="jsbox/jquery.fancybox.css" type="text/css" media="screen">
+<!-- <link rel="stylesheet" href="jsbox/jquery.fancybox.css" type="text/css" media="screen"> -->
 
 </head>
 <body id="home">
@@ -223,6 +223,17 @@ I live by "measure thrice, cut once." It may slow down, but I am exacting.
 
 <div class="footer">Copyright 2015 by <b>Miguel Fregoso</b></div>
 
+<script> /** defer fancybox CSS **/
+  var cb = function() {
+	var l = document.createElement('link'); l.rel = 'stylesheet';
+	l.href = 'jsbox/jquery.fancybox.css';
+	var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+	  webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+</script>
 <script src="jquery.js"></script>
 <script type="text/javascript" src="jsbox/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
