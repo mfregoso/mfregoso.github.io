@@ -15,16 +15,18 @@
 .white {color: #ffffff;}
 .black {color: #000000;}
 .darkgray {color: #34383B;}
-.borange {background-color: #E56E5C;}
-svg.t1 {fill: #E56E5C;}
-.trans1 {background-color: #34383B;}
-svg.t2 {fill: #34383B;}
-.trans2 {background-color: #55CBED;}
-svg.t3 {fill: #55CBED;}
-.trans3 {background-color: #523A34;}
-svg.t4 {fill: #523A34;}
+.borange {background-color: #E56E5C;} /* cyan: #1F8DD6; */
+
+.s0 {background-color: #E56E5C;} /* summary */
+svg.t0 {fill: #E56E5C;}
+.trans1 {background-color: #34383B;} /* education */
+svg.t1 {fill: #34383B;}
+.trans2 {background-color: #4EADF0;} /* skills */
+svg.t2 {fill: #4EADF0;}
+.trans3 {background-color: #523A34;} /* tech */
+svg.t3 {fill: #523A34;}
 .trans4 {background-color: #FFFFFF;}
-svg.t5 {fill: #FFFFFF;}
+svg.t4 {fill: #FFFFFF;}
 .trans5 {background-color: #333333;}
 
 /* General Links */
@@ -103,7 +105,7 @@ height: 24px;
 text-align: center;
 padding: 0;
 margin: 0;
-line-height: 0px;
+line-height: 24px;
 }
 
 /* contact info & trickery */
@@ -127,7 +129,7 @@ span.linkarrow {position: relative; left: -1.1rem;}
 @media (min-width: 750px) {
   img.linkarrow  {
 	padding-right: 3px; width: 1.6rem; height: 1.6rem; position: relative; bottom: -0.1rem;}
-  span.linkarrow {position: relative; left: -1.9rem;}
+  span.linkarrow {position: relative; left: -1.8rem;}
 }
 
 /* list small indentation */
