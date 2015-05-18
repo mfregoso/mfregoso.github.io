@@ -175,3 +175,11 @@ margin-left: 1.7rem;
 font-weight: bold;
 /*font-size: 2rem;*/
 }
+
+/** READ MORE **/
+.morecontent span {
+display: none;
+}
+.morelink {
+display: inline-block;
+}

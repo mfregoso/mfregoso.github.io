@@ -231,7 +231,7 @@ The whole picture matters: realized this during the creation of this website. Iâ
 <div class="expand">
 	<span class="question big">HTML, CSS, SVG design</span>
 	<div class="answer">
-Before this site, I was only familiar with HTML coding and using tables for a page's layout. Now I'm still no expert, but I can proudly say that I wrote nearly all of this site's custom CSS and HTML. I traded tables for divs and used classes to avoid repeating code. However, the design I came up with was specifically made for a desktop. I had the look I wanted but it didn't translate well to other screen resolutions. But rather than re-write my entire CSS I decided to port my design into the Skeleton responsive framework. In doing so, I learned about media queries and, consequently, managed to retain the same exact look on a desktop while preserving the design language for mobile devices. Moreover I replaced all images with SVG and CSS code, so now I can easily change each section's background color without having to create a corresponding graphic for the "transition triangle." And while my contact information is clearly visible, the code is actually obfuscated to thwart spam-bots and e-mail harvesters.
+Before this site, I was only familiar with HTML coding and using tables for a page's layout. Now I'm still no expert, but I can proudly say that I wrote nearly all of this site's custom CSS and HTML. <span class="more">I traded tables for divs and used classes to avoid repeating code. However, the design I came up with was specifically made for a desktop. I had the look I wanted but it didn't translate well to other screen resolutions. But rather than re-write my entire CSS I decided to port my design into the Skeleton responsive framework. In doing so, I learned about media queries and, consequently, managed to retain the same exact look on a desktop while preserving the design language for mobile devices. Moreover I replaced all images with SVG and CSS code, so now I can easily change each section's background color without having to create a corresponding graphic for the "transition triangle." And while my contact information is clearly visible, the code is actually obfuscated to thwart spam-bots and e-mail harvesters.</span>
 	</div>
 </div><br>
 
@@ -304,12 +304,36 @@ $('.answer').hide();
 $('.expand .question').click(function(){
 $(this).next('.answer').slideToggle(500);
 $(this).toggleClass('close');
-/* },
-function(){
-$(this).next('.answer').slideDown();
-$(this).removeclass('close');*/
 }
 );
+});
+
+/** read more--text expansion **/
+$(document).ready(function() {
+    var moretext = "Read More";
+    var lesstext = "&nbsp;Close";
+    
+    $('.more').each(function() {
+        var content = $(this).html();{
+          var html = '<span class="morecontent"><span>' + content + '</span><a href="#" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
 });
 
 /** start fancybox **/
