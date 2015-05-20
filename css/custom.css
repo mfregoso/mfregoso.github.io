@@ -127,12 +127,12 @@ h4.contact {font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 img.linkarrow {padding-right: 2px; width: 1rem; height: 1rem;}
 span.linkarrow {position: relative; left: -1.1rem;}
 @media (min-width: 750px) {
-  img.linkarrow  {padding-right: 3px; width: 1.6rem; height: 1.6rem; bottom: -0.1rem;}
+  img.linkarrow  {padding-right: 3px; width: 1.6rem; height: 1.6rem;}
   span.linkarrow {position: relative; left: -1.8rem;}
 }
 
 /* list small indentation */
-.lsin {padding: 0 0 0 0.2rem;}
+.lsin {padding: 0 0 0 0;}
 .lsin li {list-style: none;}
 .lsin ul li {text-indent: -1.1rem; padding-left: 1.1rem;} /* indent wrapped text:: check on mobile */
 @media (min-width: 750px) {
@@ -151,7 +151,7 @@ border-top: dashed 1px;
 border-color: #575757;
 }
 
-.why {text-indent: -1.3rem; padding-left: 1.3rem; position: relative; left: -1.1rem;} /* indent wrapped text:: check on mobile */
+.why {text-indent: -1.2rem; padding-left: 1.2rem; position: relative; left: -1.2rem;} /* indent wrapped text:: check on mobile */
 @media (min-width: 750px) {
 	.why {text-indent: -2rem; padding-left: 2rem; position: relative; left: -1.8rem;}
 }
