@@ -185,6 +185,6 @@ font-weight: bold;
 display: none;
 }
 .morelink {
-display: inline;
+display: inline-block;
 background-color: black;
 }
