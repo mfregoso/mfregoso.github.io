@@ -30,8 +30,8 @@ svg.t4 {fill: #FFFFFF;}
 .trans5 {background-color: #333333;}
 
 /* General Links */
-a, a:link, a:visited, a:active {color: #f3f3f3; text-decoration: none;}
-a:hover {color: #f3f3f3; text-decoration: underline; }
+a, a:link, a:visited, a:active {color: #f3f3f3; text-decoration: underline;}
+a:hover {color: #f3f3f3; text-decoration: none; }
 
 /* Inverse link decoration */
 .inverse:link {text-decoration: underline;}
@@ -41,7 +41,7 @@ a:hover {color: #f3f3f3; text-decoration: underline; }
 
 #spacer {display: none;}
 @media (min-width: 750px) {
-	#spacer {width:100%; height: 4.5rem; display: block;}
+	#spacer {width:100%; height: 45px; display: block;}
 }
 
 #menu {display: none;}
@@ -71,7 +71,6 @@ a:hover {color: #f3f3f3; text-decoration: underline; }
   z-index: 100;}
 }
 
-/* FORMERLY .mlink (class for a:) OLD = width: 120px; padding: 0; */
 #menu a {
 color: #f3f3f3;
 line-height: 34px;
@@ -123,7 +122,7 @@ h4.contact {font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
 
 .title {width: 100%; text-align: center; margin: 0 auto;}
 
-/* responsive ARROW size & position */
+/* responsive arrow size & position */
 img.linkarrow {padding-right: 2px; width: 1rem; height: 1rem;}
 span.linkarrow {position: relative; left: -1.1rem;}
 @media (min-width: 750px) {
@@ -141,7 +140,7 @@ span.linkarrow {position: relative; left: -1.1rem;}
 #neg {position: absolute; top: -500px;}
 
 .footer {
-background-color: #EDE5E5;
+background-color: #e1e2df;
 color: black;
 width: 100%;
 padding-top: 3px;
@@ -186,5 +185,7 @@ display: none;
 }
 .morelink {
 display: inline-block;
-background-color: black;
+font-weight: bold;
 }
+
+a.morelink {color: black;}
