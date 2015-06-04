@@ -170,5 +170,5 @@ display: inline;
 font-size: 80%;
 }
 
-a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 1px 6px 0 6px;}
+a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 1px 5px 0 5px;}
 a.morelink:hover {background-color: gray;}
