@@ -61,8 +61,8 @@ a:hover {color: #f3f3f3; text-decoration: none; }
   margin: 0 auto;
   text-align: center;
   background-color: rgba(55, 55, 55, 0.95); /* 55,55,55/0.95 */
-  border-bottom: solid 3px;
-  border-top: solid 3px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
   border-color: black;
   font-size: 20px;
   font-weight: 400;
@@ -140,7 +140,7 @@ span.linkarrow {position: relative; left: -1.1rem;}
 #neg {position: absolute; top: -500px;}
 
 .footer {
-background-color: #e1e2df;
+background-color: silver;
 color: black;
 width: 100%;
 padding-top: 3px;
@@ -167,8 +167,8 @@ display: none;
 }
 .morelink {
 display: inline;
-font-size: 80%;
+font-size: 85%;
 }
 
-a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 1px 5px 0 5px;}
+a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 2px 4px 1px 6px;}
 a.morelink:hover {background-color: gray;}
