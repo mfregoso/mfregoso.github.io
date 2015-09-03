@@ -311,7 +311,7 @@ a.morelink:hover {background-color: gray;}
 <a href="#home" title="Home">Home</a>
 <a href="#education" title="Education">Education</a>
 <a href="#skills" title="Skills">Skills</a>
-<a href="#documents" title="Documents">Documents</a>
+<a href="#portfolio" title="Portfolio">Portfolio</a>
 <a href="#whyme" title="Why Me?">Why Me?</a>
 </div>
 
@@ -423,7 +423,7 @@ UC Santa Barbara GPA: 3.56
 	</div>
 </div>
 
-<div class="trans trans3" id="documents">
+<div class="trans trans3" id="portfolio">
 <svg class="t2" width="58px" height="24px"><polygon points="0,-1 58,-1 29,24"/></svg>
 </div>
 
@@ -431,27 +431,27 @@ UC Santa Barbara GPA: 3.56
 	<div class="container">
 		<section class="invert">
 	
-<h2 class="title">Documents</h2><br>
+<h2 class="title">Portfolio</h2><br>
 
-<b>Resume</b><br>
-<a href="/resume" target="_blank">[Word]</a> <a href="/resumepdf" target="_blank">[PDF]</a><br><br>
+<b>Résumé</b><br>
+<a href="/resume" target="_blank" rel="nofollow">[Word]</a> <a href="/resumepdf" target="_blank" rel="nofollow">[PDF]</a><br><br>
 
 <b>CPA Exam</b><br>
-<a href="https://www.dropbox.com/s/ubjnjiy72bfotpz/CPA%20Exam%20Scores.jpg?dl=0" target="_blank">CA Board of Accountancy</a>
+<a href="https://www.dropbox.com/s/ubjnjiy72bfotpz/CPA%20Exam%20Scores.jpg" target="_blank" rel="nofollow">CA Board of Accountancy</a>
 <br><br>
 
-<b>Summarization Samples</b><br>
+<b>Summarization</b><br>
 <div class="lsin"><ul>
-<li>&bull; <a href="https://www.dropbox.com/s/hc7znws1pqttchw/AUD%20Notes.doc?dl=0" target="_blank">AUD Review</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/i5drlq4dokaqhx3/REG%20Notes.docx?dl=0" target="_blank">REG Review</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/um1wij4ajil4jof/BEC%20Notes.docx?dl=0" target="_blank">BEC Review</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/hc7znws1pqttchw/AUD%20Notes.doc" target="_blank" rel="nofollow">AUD Review Notes</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/i5drlq4dokaqhx3/REG%20Notes.docx" target="_blank" rel="nofollow">REG Review Notes</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/um1wij4ajil4jof/BEC%20Notes.docx" target="_blank" rel="nofollow">BEC Review Notes</a><li>
 </ul></div>
 
-<b>Rental Work Samples</b><br>
+<b>Rental Work Documents</b><br>
 <div class="lsin"><ul>
-<li>&bull; <a href="https://www.dropbox.com/s/26wtunsh43zqhyz/Deposit%20Deduction.docx?dl=0" target="_blank">Deposit Deduction Statement</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/p43ukvl06n1iwif/Rental%20Agreement.docx?dl=0" target="_blank">Rental Agreement Form</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx?dl=0" target="_blank">Rent Change Notice</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/26wtunsh43zqhyz/Deposit%20Deduction.docx" target="_blank" rel="nofollow">Deposit Deduction Statement</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/p43ukvl06n1iwif/Rental%20Agreement.docx" target="_blank" rel="nofollow">Rental Agreement Form</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx" target="_blank" rel="nofollow">Rent Change Notice</a><li>
 </ul></div>
 
 		</section>
@@ -471,7 +471,7 @@ UC Santa Barbara GPA: 3.56
 <!-- MOBILE WRAPPING POINTS: TITLE=86 chars & CONTENT=70 chars; if NO READMORE, then ~80 chars -->
 
 <div class="why big">
-<img src="img/blkarw.png" class="linkarrow">I can, and will, learn just about anything</div>
+<img src="img/blkarw.png" class="linkarrow">I can figure out just about anything</div>
 Whether by instruction or independent effort, I will learn whatever is needed to succeed. <span class="more">I am equally capable with both methods, and self-study has become a strength of mine due to online courses and my CPA exam preparation.&nbsp;</span>
 <br><br>
 
@@ -486,13 +486,18 @@ I am able to make do and even thrive in such environments. <span class="more">In
 <br><br>
 
 <div class="why big">
+<img src="img/blkarw.png" class="linkarrow">I know when to ask for help</div>
+Usually I will attempt to find answers on my own. <span class="more">But in situations where time of the essence, I will consult with superior.&nbsp;</span>
+<br><br>
+
+<div class="why big">
 <img src="img/blkarw.png" class="linkarrow">Problem-solving is always on my mind</div>
 From financial and technical to everyday issues, I am constantly thinking of potential improvements, solutions and workarounds.
 <!-- <span class="more">&nbsp;</span> -->
 <br><br>
 
 <div class="why big">
-<img src="img/blkarw.png" class="linkarrow">I’m not afraid of public speaking</div>
+<img src="img/blkarw.png" class="linkarrow">I work on my weaknesses</div>
 I am also visiting Toastmasters to improve my speech-making skills .<!-- <span class="more">Expand.&nbsp;</span> -->
 
 	
@@ -543,7 +548,7 @@ $(document).ready(function() {
     
     $('.more').each(function() {
         var content = $(this).html();{
-          var html = '<span class="morecontent"><span>' + content + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+          var html = '<span class="morecontent"><span>' + content + '</span><a href="" class="morelink" rel="nofollow">' + moretext + '</a></span>';
  
             $(this).html(html);
         }
