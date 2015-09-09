@@ -286,6 +286,15 @@ border-color: #575757;
 
 /** EXPAND-COLLAPSE STYLING **/
 
+/* collapsed */
+.question {text-decoration: underline; cursor: pointer;}
+.question:hover {text-decoration: none;}
+
+/* expanded */
+.question.close {text-decoration: none;}
+
+.answer {position: relative; top: -1.5rem;}
+
 .big {
 font-weight: bold;
 }
@@ -454,6 +463,19 @@ UC Santa Barbara GPA: 3.56
 <li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx" target="_blank" rel="nofollow">Rent Change Notice</a><li>
 </ul></div>
 
+<div class="why expand">
+<img src="img/whtarw.png" class="linkarrow"><span class="question big">Personal & Hobby Projects</span>
+	<div class="answer">
+<br>
+<b>Computers</b><br>
+<div class="lsin"><ul>
+<li>&bull; Item 1<li>
+<li>&bull; Item 2<li>
+</ul></div>
+<b>Routers</b>
+	</div>
+</div>
+
 		</section>
 	</div>
 </div>
@@ -499,7 +521,6 @@ From financial and technical to everyday issues, I am constantly thinking of pot
 <div class="why big">
 <img src="img/blkarw.png" class="linkarrow">I work on my weaknesses</div>
 I am also visiting Toastmasters to improve my speech-making skills .<!-- <span class="more">Expand.&nbsp;</span> -->
-
 	
 		</section>
 	</div>
@@ -574,19 +595,14 @@ $(document).ready(function() {
 	$(".fancybox").fancybox();
 });
 
-/** enable inline pop-up box **/
+/** click-expand **/
 $(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 600,
-		maxHeight	: 600,
-		fitToView	: true,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'fade',
-		closeEffect	: 'none'
-	});
+$('.answer').hide();
+$('.expand .question').click(function(){
+$(this).next('.answer').slideToggle(500);
+$(this).toggleClass('close');
+}
+);
 });
 </script>
 
