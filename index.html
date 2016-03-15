@@ -146,10 +146,10 @@ li {
 svg.t0 {fill: #E56E5C;}
 .trans1 {background-color: #34383B;} /* education */
 svg.t1 {fill: #34383B;}
-.trans2 {background-color: #759fcd;} /* documents */
+.trans2 {background-color: #759fcd;} /* skills */
 svg.t2 {fill: #759fcd;}
-.trans3 {background-color: #523A34;} /* tech */
-svg.t3 {fill: #523A34;}
+.trans3 {background-color: #47322D;} /* samp-docs */
+svg.t3 {fill: #47322D;}
 .trans4 {background-color: #FFFFFF;} /* why me */
 svg.t4 {fill: #FFFFFF;}
 .trans5 {background-color: #333333;}
@@ -293,11 +293,21 @@ border-color: #575757;
 /* expanded */
 .question.close {text-decoration: none;}
 
-.answer {position: relative; top: -1.5rem;}
+.answer {position: relative;}
 
 .big {
 font-weight: bold;
 }
+
+/** BUTTON LOAD MORE **/
+
+.btnmore {cursor: pointer; text-decoration: none; color: black; border-radius: 4px; background-color: silver; padding: 3px 8px 3px 11px;}
+.btnmore:hover {background-color: gray;}
+
+/* expanded */
+.btnmore.close {text-decoration: none; display: none;}
+
+.btnload {position: relative;}
 
 /** READ MORE **/
 .morecontent span {
@@ -306,9 +316,10 @@ display: none;
 .morelink {
 display: inline-block;
 font-size: 85%;
+cursor: pointer;
 }
 
-a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 0px 5px 0px 6px;}
+a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 0px 8px 0px 8px;}
 a.morelink:hover {background-color: gray;}
 
 </style>
@@ -320,7 +331,7 @@ a.morelink:hover {background-color: gray;}
 <a href="#home" title="Home">Home</a>
 <a href="#education" title="Education">Education</a>
 <a href="#skills" title="Skills">Skills</a>
-<a href="#portfolio" title="Portfolio">Portfolio</a>
+<a href="#samples" title="Portfolio">Samples</a>
 <a href="#whyme" title="Why Me?">Why Me?</a>
 </div>
 
@@ -374,9 +385,12 @@ University of California, Sa<pre>nta Claus</pre>nta Bar<strong>ometer</strong>ba
 Bachelor of Arts, Business Economics & Black Studies<br>
 Honors and Distinction in the Major<br><br>
 
-CPA Exam Average Score: 88<br>
-Cumulative Accounting GPA: 3.6<br>
-UC Santa Barbara GPA: 3.56
+CPA Exam Average Score, 88<br>
+Cumulative Accounting GPA, 3.6<br>
+UC Sa<pre>nta Claus</pre>nta Bar<strong>ometer</strong>bara GPA, 3.56<br><br>
+
+<span class="linkarrow">
+<img src="img/whtarw.png" class="linkarrow"><a href="#transcripts">Transcripts</a></span>
 
 		</section>
 	</div>
@@ -432,7 +446,7 @@ UC Santa Barbara GPA: 3.56
 	</div>
 </div>
 
-<div class="trans trans3" id="portfolio">
+<div class="trans trans3" id="samples">
 <svg class="t2" width="58px" height="24px"><polygon points="0,-1 58,-1 29,24"/></svg>
 </div>
 
@@ -440,41 +454,36 @@ UC Santa Barbara GPA: 3.56
 	<div class="container">
 		<section class="invert">
 	
-<h2 class="title">Portfolio</h2><br>
+<h2 class="title">Samples & Documents</h2><br>
 
-<b>Résumé</b><br>
-<a href="/resume" target="_blank" rel="nofollow">[Word]</a> <a href="/resumepdf" target="_blank" rel="nofollow">[PDF]</a><br><br>
-
-<b>CPA Exam</b><br>
-<a href="https://www.dropbox.com/s/ubjnjiy72bfotpz/CPA%20Exam%20Scores.jpg" target="_blank" rel="nofollow">CA Board of Accountancy</a>
-<br><br>
-
-<b>Summarization</b><br>
-<div class="lsin"><ul>
-<li>&bull; <a href="https://www.dropbox.com/s/hc7znws1pqttchw/AUD%20Notes.doc" target="_blank" rel="nofollow">AUD Review Notes</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/i5drlq4dokaqhx3/REG%20Notes.docx" target="_blank" rel="nofollow">REG Review Notes</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/um1wij4ajil4jof/BEC%20Notes.docx" target="_blank" rel="nofollow">BEC Review Notes</a><li>
-</ul></div>
 
 <b>Rental Work Documents</b><br>
 <div class="lsin"><ul>
-<li>&bull; <a href="https://www.dropbox.com/s/26wtunsh43zqhyz/Deposit%20Deduction.docx" target="_blank" rel="nofollow">Deposit Deduction Statement</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/p43ukvl06n1iwif/Rental%20Agreement.docx" target="_blank" rel="nofollow">Rental Agreement Form</a><li>
-<li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx" target="_blank" rel="nofollow">Rent Change Notice</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/26wtunsh43zqhyz/Deposit%20Deduction.docx?dl=0" target="_blank" rel="nofollow">Deposit Deduction Statement</a><li>
+<li id="transcripts">&bull; <a href="https://www.dropbox.com/s/p43ukvl06n1iwif/Rental%20Agreement.docx?dl=0" target="_blank" rel="nofollow">Rental Agreement Form</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx?dl=0" target="_blank" rel="nofollow">Rent Change Notice</a><li>
 </ul></div>
 
-<div class="why expand">
-<img src="img/whtarw.png" class="linkarrow"><span class="question big">Personal & Hobby Projects</span>
-	<div class="answer">
-<br>
-<b>Computers</b><br>
+<b>Summarization & Note-taking</b><br>
 <div class="lsin"><ul>
-<li>&bull; Item 1<li>
-<li>&bull; Item 2<li>
+<li>&bull; <a href="https://www.dropbox.com/s/hc7znws1pqttchw/AUD%20Notes.doc?dl=0" target="_blank" rel="nofollow">Audit & Attestation Review</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/i5drlq4dokaqhx3/REG%20Notes.docx?dl=0" target="_blank" rel="nofollow">Regulation & Tax Review</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/um1wij4ajil4jof/BEC%20Notes.docx?dl=0" target="_blank" rel="nofollow">Business Environment Review</a><li>
 </ul></div>
-<b>Routers</b>
-	</div>
-</div>
+
+<b>Transcripts</b><br>
+<div class="lsin"><ul>
+<li>&bull; <a href="https://www.dropbox.com/s/u5xoor6z3y4dxua/lavc_trans.jpg?dl=0" target="_blank" rel="nofollow">Los Angeles Valley College</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/x0bb7x6no11gmc4/smc_trans.jpg?dl=0" target="_blank" rel="nofollow">Santa Monica College</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/mwd17emiuih3l3y/ucsb_trans.pdf?dl=0" target="_blank" rel="nofollow">UC Sa<pre>nta Claus</pre>nta Bar<strong>ometer</strong>bara</a><li>
+</ul></div>
+
+<b>CPA Exam</b><br>
+<a href="https://www.dropbox.com/s/ubjnjiy72bfotpz/CPA%20Exam%20Scores.jpg?dl=0" target="_blank" rel="nofollow">CA Board of Accountancy</a>
+<br><br>
+
+<!-- <b>Résumé</b><br>
+<a href="/resume" target="_blank" rel="nofollow">[Word]</a> <a href="/resumepdf" target="_blank" rel="nofollow">[PDF]</a><br><br> -->
 
 		</section>
 	</div>
@@ -521,7 +530,29 @@ From financial and technical to everyday issues, I am constantly thinking of pot
 <div class="why big">
 <img src="img/blkarw.png" class="linkarrow">I work on my weaknesses</div>
 I am also visiting Toastmasters to improve my speech-making skills .<!-- <span class="more">Expand.&nbsp;</span> -->
-	
+<br><br>
+
+<div class="loadmorebtn">
+<span class="btnmore">Load More</span>
+	<div class="btnload">
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">I know how to when and how to ask for help</div>
+First I’ll try independently and online. If time-sensitive, I’ll ask a person. <span class="more">Expand.&nbsp;</span>
+<br><br>
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">Problem-solving is always on my mind</div>
+From financial and technical to everyday issues, I am constantly thinking of potential improvements, solutions and workarounds.
+<!-- <span class="more">&nbsp;</span> -->
+<br><br>
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">I work on my weaknesses</div>
+I am also visiting Toastmasters to improve my speech-making skills .<!-- <span class="more">Expand.&nbsp;</span> -->
+
+	</div>
+</div>
+
 		</section>
 	</div>
 </div>
@@ -564,8 +595,8 @@ $(document).ready(function(){
 
 /** read more--text expansion **/
 $(document).ready(function() {
-    var moretext = "Read More";
-    var lesstext = "Read Less";
+    var moretext = "+";
+    var lesstext = "-";
     
     $('.more').each(function() {
         var content = $(this).html();{
@@ -600,6 +631,16 @@ $(document).ready(function() {
 $('.answer').hide();
 $('.expand .question').click(function(){
 $(this).next('.answer').slideToggle(500);
+$(this).toggleClass('close');
+}
+);
+});
+
+/** disappearing load-more **/
+$(document).ready(function() {
+$('.btnload').hide();
+$('.loadmorebtn .btnmore').click(function(){
+$(this).next('.btnload').slideToggle(500);
 $(this).toggleClass('close');
 }
 );
