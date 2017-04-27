@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Miguel 'Michael' Fregoso">
+
+<title>Miguel "Michael" Fregoso</title>
+
+<!-- FAVICON <link rel="icon" type="image/png" href="/favicon.png"> -->
+
+<!-- defer via bottom JS <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+<style>
+
+/* NORMALIZE */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+header,
+section {
+  display: block;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+b, strong {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* ##### Grid ##### */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px; /* 2rem also works */
+  box-sizing: border-box; }
+
+/* column removed here */
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+/* ALL column stuff removed */
+}
+
+/* all REM measurements are based on 10px sizing. e.g. 1.5rem = 15px */
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: Raleway, "Century Gothic", "Avant Garde", Arial; }
+
+/* Typography Sizes */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+/* h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;} */
+h1 { font-size: 3.6rem; line-height: 1.2; letter-spacing: -.1rem; }
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+p {
+  margin: 0; padding: 0; }
+
+/* Lists */
+ul {
+  list-style: disc inside; } /* prior circle */
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+li {
+  margin-bottom: 0rem; } /* prior 1rem */
+  
+.container {
+  max-width: 760px;
+  min-width: 320px;
+  }
+
+/* bigger CONTENT FONT for desktops */
+@media (min-width: 750px) {
+  .container  section  {
+	font-size: 2.0rem;
+	line-height: 2.8rem;}
+}
+
+/* classes of color */
+.offwhite {color: #f3f3f3;}
+.white {color: #ffffff;}
+.black {color: #000000;}
+.darkgray {color: #34383B;}
+.borange {background-color: #E56E5C;} /* cyan: #1F8DD6; */
+
+.s0 {background-color: #ffffff;} /* color for spacer + overall BG*/
+
+/* General Links */
+a, a:link, a:visited, a:active {color: #000000; text-decoration: none;}
+a:hover {color: #1EAEDB; text-decoration: none; }
+
+/* Inverse link decoration */
+.inverse:link {text-decoration: none;}
+.inverse:hover {text-decoration: underline;}
+
+/* navbar-menu disabled for mobile devices */
+
+#spacer {display: none;}
+@media (min-width: 750px) {
+	#spacer {width:100%; height: 45px; display: block;}
+}
+
+#menu {display: none;}
+
+@media (min-width: 750px) {
+#menu {
+  display: block;
+  position: fixed;
+  min-width: 500px;
+  left: 0%;
+  top: 0;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff; /* rgba(55, 55, 55, 0.95) */
+  border-bottom: solid 1px;
+  border-top: 0px;
+  border-color: rgba(55, 55, 55, 0.35);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: black;
+  z-index: 100;}
+}
+
+#menu a {
+color: #000000;
+line-height: 34px;
+display: inline-block;
+text-align: center;
+height: 34px;
+border: 0;
+padding: 0px 15px 0px 15px;
+margin: 0 auto;
+text-decoration: none;
+}
+
+#menu a:hover {
+color: #1EAEDB;
+text-decoration: none;
+}
+
+/* 100% width BG color wrapper */
+.cwrap {
+width: 100%;
+padding-top: 4.8rem; /* 48px */
+padding-bottom: 7.2rem; /* 66px */
+}
+
+/* box for the color transition triangle */
+.trans {
+width: 100%;
+height: 24px;
+text-align: center;
+padding: 0;
+margin: 0;
+line-height: 24px;
+}
+
+/* contact info & trickery */
+.container header {width: 100%; text-align: center; margin: 0 auto;}
+strong, pre {display: none;}
+.code {unicode-bidi:bidi-override; direction:rtl;}
+
+h4.contact {font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+@media (min-width: 550px) { /* phablet */
+  h4.contact {font-size: 2.5rem; }
+}
+@media (min-width: 750px) { /* tablet */
+  h4.contact {font-size: 3.0rem;}
+}
+
+.title {width: 100%; text-align: center; margin: 0 auto; padding-bottom: 1rem;}
+
+/* responsive arrow size & position */
+img.linkarrow {padding-right: 2px; width: 1rem; height: 1rem;}
+span.linkarrow {position: relative; left: -1.1rem;}
+@media (min-width: 750px) {
+  img.linkarrow  {padding-right: 3px; width: 1.6rem; height: 1.6rem;}
+  span.linkarrow {position: relative; left: -1.8rem;}
+}
+
+/* list small indentation */
+.lsin {padding: 0 0 0 0px;}
+.lsin li {list-style: none;}
+.lsin ul li {text-indent: -1.1rem; padding-left: 1.1rem;} /* indent wrapped text:: check on mobile */
+@media (min-width: 750px) {
+	.lsin ul li {text-indent: -1.4rem; padding-left: 1.4rem;}
+}
+
+.footer {
+background-color: #34383B;
+color: white;
+width: 100%;
+padding-top: 2px;
+padding-bottom: 2px;
+text-align: center;
+border-top: dashed 0px;
+border-color: #575757;
+}
+
+.why {text-indent: -1.2rem; padding-left: 1.2rem; position: relative; left: -1.3rem;} /* indent wrapped text:: check on mobile */
+@media (min-width: 750px) {
+	.why {text-indent: -2rem; padding-left: 2rem; position: relative; left: -1.8rem;}
+}
+
+/** EXPAND-COLLAPSE STYLING **/
+
+/* collapsed */
+.question {text-decoration: underline; cursor: pointer;}
+.question:hover {text-decoration: none;}
+
+/* expanded */
+.question.close {text-decoration: none;}
+
+.answer {position: relative;}
+
+.big {
+font-weight: bold;
+}
+
+/** BUTTON LOAD MORE **/
+
+.btnmore {cursor: pointer; text-decoration: none; color: black; border-radius: 4px; background-color: silver; padding: 3px 8px 3px 11px;}
+.btnmore:hover {background-color: gray;}
+
+/* expanded */
+.btnmore.close {text-decoration: none; display: none;}
+
+.btnload {position: relative;}
+
+/** READ MORE **/
+.morecontent span {
+display: none;
+}
+.morelink {
+display: inline-block;
+font-size: 85%;
+cursor: pointer;
+}
+
+a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 0px 8px 0px 8px;}
+a.morelink:hover {background-color: gray;}
+
+.morelink.less {display: none;}
+
+.hey {
+border: 0px;
+padding: 8px 15px 8px 15px;
+border-radius: 4px;
+background-color: #1EAEDB;
+color: white;
+}
+
+hr {background-color: white; border-color: white;}
+
+</style>
+
+</head>
+<body id="home">
+
+<div id="menu">
+<a href="#home" title="Home">Home</a>
+<a href="#education" title="Education">Education</a>
+<a href="#skills" title="Skills">Skills</a>
+<a href="#samples" title="Portfolio">Samples</a>
+<a href="#whyme" title="Why Me?">Why Me?</a>
+</div>
+
+<div id="spacer" class="s0"></div>
+
+
+<div class="cwrap s0 black">
+	<div class="container">
+		<section>
+
+<header>
+<h2>Miguel Fregoso</h2>
+
+<img src="http://www.gore-tex.com/blog/app/themes/eublog/theme/assets/img-eublog/avatar.jpg" height="270px"><br><br>
+
+<!-- <hr style="width: 95%; max-width: 600px; margin: 3.1rem auto 3.0rem auto;"> -->
+
+<span class="">Tech-smart accounting</span></header><br>
+
+I have a high-quality, no-nonsense work ethic and a strong desire to succeed. I perform well both independently and in teams, and I have successfully completed the CPA exam. <!-- I'm open to new ideas and more than willing to utilize my own time to excel on-the-job. -->
+<br><br>
+Having extensive experience with computers, I offer a superior level of technical savvy and adaptability. From new technology to new concepts, I catch on quickly and will be up and running in no time.
+
+<br><br><br><br><hr id="education"><br><br>
+		
+<h2 class="title">Education</h2><br>
+
+IRS VITA Advanced<br>
+<span class="linkarrow">
+<img src="img/blkarw.png" class="linkarrow"><a target="_blank" href="https://sites.google.com/site/mfregosodotcom/vita.certificate.pdf">VITA/TCE Certificate</a></span><br>
+<span class="linkarrow">
+<img src="img/blkarw.png" class="linkarrow"><a class="fancybox" href="https://sites.google.com/site/mfregosodotcom/vita.exam.scores.png">Certification Test Scores</a></span>
+
+<br><br>
+
+CPA Exam<br>
+Wiley CPA Self-Study<br>
+<span class="linkarrow">
+<img src="img/blkarw.png" class="linkarrow"><a class="fancybox fancybox.iframe" href="csreport.html">CPA Exam Score Report</a></span>
+
+<br><br>
+
+Santa Monica College<br>
+Los Angeles Valley College<br>
+Accounting for CPA Exam Qualification
+<br><br>
+
+University of California, Sa<pre>nta Claus</pre>nta Bar<strong>ometer</strong>bara<br>
+Bachelor of Arts, Business Economics & Black Studies<br>
+Honors and Distinction in the Major
+
+<br><br><br><br><hr id="skills"><br><br>
+
+<h2 class="title">Skills & Experience</h2>
+<br>
+
+<b>Rental Real Estate</b><br>
+<div class="lsin"><ul>
+<li>&bull; Researched market prices and rental laws and regulations</li>
+<li>&bull; Created multimedia-rich listings and assisted with screening of applicants</li>
+<li>&bull; Drafted lease terms, rent increase notice and deposit deduction letter</li>
+</ul></div>
+
+<b>Individual Tax Return Filing</b><br>
+<div class="lsin"><ul>
+<li>&bull; Electronically filed state and federal returns</li>
+<li>&bull; Consulted IRS website for clarification on tax forms and issues</li>
+</ul></div>
+
+<b>Web Design</b><br>
+<div class="lsin"><ul>
+<li>&bull; Custom CSS, HTML and SVG written for this site<li>
+<li>&bull; Adapted third-party Javascript and Perl scripts<li>
+</ul></div>
+
+<b>Software</b><br>
+<div class="lsin"><ul>
+<li>&bull; Microsoft Word, Excel, PowerPoint, Outlook<li>
+<li>&bull; Quickbooks, ACL Desktop<li>
+<li>&bull; Windows, Ubuntu Linux<li>
+</ul></div>
+
+<b>General</b><br>
+<div class="lsin"><ul>
+<li>&bull; Database and online researching<li>
+<li>&bull; Experienced with qualitative and quantitative analyses<li>
+<li>&bull; Adept at summarizing complex information<li>
+<li>&bull; Excellent written communication<li>
+<li>&bull; Bilingual in Spanish<li>
+</ul></div>
+
+<br><br><hr id="samples"><br><br>
+
+<h2 class="title">Samples & Documents</h2><br>
+
+
+<b>Rental Work Forms</b><br>
+<div class="lsin"><ul>
+<li>&bull; <a href="https://www.dropbox.com/s/26wtunsh43zqhyz/Deposit%20Deduction.docx?dl=0" target="_blank" rel="nofollow">Deposit Deduction Statement</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/p43ukvl06n1iwif/Rental%20Agreement.docx?dl=0" target="_blank" rel="nofollow">Rental Agreement Form</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/igqywj3vwghm1kx/Rent%20Change%20Notice.docx?dl=0" target="_blank" rel="nofollow">Rent Change Notice</a><li>
+</ul></div>
+
+<b>Summarization/Note-taking</b><br>
+<div class="lsin"><ul>
+<li>&bull; <a href="https://www.dropbox.com/s/0eiqmwpe9v516jc/Excel%20Notes.docx?dl=0" target="_blank" rel="nofollow">Accounting with Excel Guide</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/hc7znws1pqttchw/AUD%20Notes.doc?dl=0" target="_blank" rel="nofollow">Audit & Attestation Review</a><li>
+<li id="transcripts">&bull; <a href="https://www.dropbox.com/s/i5drlq4dokaqhx3/REG%20Notes.docx?dl=0" target="_blank" rel="nofollow">Regulation & Tax Review</a><li>
+<li>&bull; <a href="https://www.dropbox.com/s/um1wij4ajil4jof/BEC%20Notes.docx?dl=0" target="_blank" rel="nofollow">Business Environment Review</a><li>
+</ul></div>
+
+<!-- <b>Résumé</b><br>
+<a href="/resume" target="_blank" rel="nofollow">[Word]</a> <a href="/resumepdf" target="_blank" rel="nofollow">[PDF]</a><br><br> -->
+
+<br><br><hr id="whyme"><br><br>
+
+<h2 class="title">So Why Me?</h2><br>
+
+<!-- MOBILE WRAPPING POINTS: TITLE=86 chars & CONTENT=70 chars; if NO READMORE, then ~80 chars -->
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">I am an excellent learner</div>
+<span class="more">Whether by instruction or independent effort, I will learn whatever is needed to succeed. I am equally capable with both methods, and self-study has become a strength of mine due to taking online courses and preparing for the CPA exam.&nbsp;</span>
+<br><br>
+
+<div class="why big"><!-- If something is attributable to me, it cannot be of shoddy quality. -->
+<img src="img/blkarw.png" class="linkarrow">I follow the motto, "Measure thrice, cut once"</div>
+<span class="more">My work is thorough and deliberate. I undertake careful preparations and never do anything haphazardly. Even under the pressure of deadlines, I maintain a high level of work quality and performance.&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">Constraints bring out my creativity and resourcefulness</div>
+<span class="more">I am able to make do and even thrive in such environments. Instead of thinking, "This can't be done," I go straight to the issue of "How can this be achieved given the available resources?"&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">I know when to ask for help</div>
+<span class="more">Usually I will try to find answers on my own. But in time-sensitive and other special situations, I will consult with superiors and colleagues.&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">Problem-solving is always on my mind</div>
+<span class="more">From financial and technical to everyday issues, I am constantly thinking of potential improvements, solutions and workarounds.&nbsp;</span>
+<!-- <span class="more">&nbsp;</span> -->
+<br><br>
+
+<!-- ADDITIONAL TOPICS
+<div class="loadmorebtn">
+<span class="btnmore">Load More</span>
+	<div class="btnload">
+
+<div class="why big">
+<img src="img/blkarw.png" class="linkarrow">Title here</div>
+Base here, no space here.<span class="more">Expand.&nbsp;</span>
+<br><br>
+
+	</div>
+</div>
+-->
+
+		</section>
+	</div>
+</div>
+
+<div class="footer">Copyright &copy; 2017</div>
+
+<script> /** defer fonts **/
+  var cb = function() {
+	var l = document.createElement('link'); l.rel = 'stylesheet';
+	l.href = 'https://fonts.googleapis.com/css?family=Raleway:400,300,600';
+	var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+	  webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script> /** defer fancybox CSS **/
+  var cb = function() {
+	var l = document.createElement('link'); l.rel = 'stylesheet'; l.media = 'screen';
+	l.href = 'jsbox/jquery.fancybox.css';
+	var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+	  webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(cb);
+  else window.addEventListener('load', cb);
+</script>
+
+<script type="text/javascript" src="jsbox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+/** code for auto-scrolling links **/
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 600, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+
+/** read more text**/
+$(document).ready(function() {
+    // Configure/customize these variables.
+    var showChar = 76;  // How many characters are shown by default
+    var ellipsestext = "...";
+    var moretext = "+";
+    var lesstext = "-";
+    
+
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});
+
+/** start fancybox **/
+$(document).ready(function() {
+	$(".fancybox").fancybox();
+});
+
+/** click-expand **/
+$(document).ready(function() {
+$('.answer').hide();
+$('.expand .question').click(function(){
+$(this).next('.answer').slideToggle(500);
+$(this).toggleClass('close');
+}
+);
+});
+
+/** disappearing load-more **/
+$(document).ready(function() {
+$('.btnload').hide();
+$('.loadmorebtn .btnmore').click(function(){
+$(this).next('.btnload').slideToggle(500);
+$(this).toggleClass('close');
+}
+);
+});
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58346432-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body></html>
