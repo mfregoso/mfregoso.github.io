@@ -22,6 +22,7 @@ html {
 body {
   margin: 0;
 }
+html,body { height: 100%;}
 header,
 section {
   display: block;
@@ -203,21 +204,27 @@ color: #1EAEDB;
 text-decoration: none;
 }
 
+#splash {
+	display:table;
+    vertical-align: middle;
+	text-align: center;
+    width:100%;
+    height:100%;
+	background-color: #34383B;}
+
+#splinfo {
+    display:table-cell;
+    vertical-align: middle;
+	text-align: center;
+    width:100%;
+    height:100%;
+	}
+
 /* 100% width BG color wrapper */
 .cwrap {
 width: 100%;
 padding-top: 4.8rem; /* 48px */
 padding-bottom: 7.2rem; /* 66px */
-}
-
-/* box for the color transition triangle */
-.trans {
-width: 100%;
-height: 24px;
-text-align: center;
-padding: 0;
-margin: 0;
-line-height: 24px;
 }
 
 /* contact info & trickery */
@@ -322,23 +329,21 @@ hr {background-color: white; border-color: white;}
 </head>
 <body id="home">
 
-<div id="menu">
-<a href="#home" title="Home">Home</a>
-<a href="#education" title="Education">Education</a>
-<a href="#skills" title="Skills">Skills</a>
-<a href="#samples" title="Portfolio">Samples</a>
-<a href="#whyme" title="Why Me?">Why Me?</a>
-</div>
+<div id="splash" class="white"><div id="splinfo">
+<h1>Miguel Fregoso</h1>
+<h4 class="contact">
+<strong>(316)45</strong>(818) 26<span class="code">oltuo@<strong>yahoo.com</strong>osog<pre>nospam@please</pre>erfm | 1<pre>540.54</pre>040-8</span>ok.com</h4>
 
-<div id="spacer" class="s0"></div>
+<hr style="height: 2px; size: 2px; background-color: #34383B; border: 1px; border-color: #34383B; width: 95%; max-width: 600px; margin: 3.1rem auto 3.0rem auto;" noshade>
 
+</div></div>
 
 <div class="cwrap s0 black">
 	<div class="container">
 		<section>
 
 <header>
-<h2>Miguel Fregoso</h2><span class="">Tech-smart accounting</span><br><br>
+<h2>Miguel Fregoso</h2><span style="position: relative; top: -1.1rem;">Tech-smart + Accounting</span><br><br>
 
 <img src="http://www.gore-tex.com/blog/app/themes/eublog/theme/assets/img-eublog/avatar.jpg" height="270px"><br><br>
 
@@ -356,7 +361,7 @@ Having extensive experience with computers, I offer a superior level of technica
 
 IRS VITA Advanced<br>
 <span class="linkarrow">
-<img src="img/blkarw.png" class="linkarrow"><a target="_blank" href="https://sites.google.com/site/mfregosodotcom/vita.certificate.pdf">VITA/TCE Certificate</a></span><br>
+<img src="img/blkarw.png" class="linkarrow"><a target="_blank" href="https://sites.google.com/site/mfregosodotcom/vita.certificate.pdf?attredirects=1">VITA/TCE Certificate</a></span><br>
 <span class="linkarrow">
 <img src="img/blkarw.png" class="linkarrow"><a class="fancybox" href="https://sites.google.com/site/mfregosodotcom/vita.exam.scores.png">Certification Test Scores</a></span>
 
@@ -418,9 +423,11 @@ Honors and Distinction in the Major
 <li>&bull; Bilingual in Spanish<li>
 </ul></div>
 
+<!--
 <br><br><hr id="samples"><br><br>
 
 <h2 class="title">Samples & Documents</h2><br>
+
 
 
 <b>Rental Work Forms</b><br>
@@ -440,6 +447,7 @@ Honors and Distinction in the Major
 
 <!-- <b>Résumé</b><br>
 <a href="/resume" target="_blank" rel="nofollow">[Word]</a> <a href="/resumepdf" target="_blank" rel="nofollow">[PDF]</a><br><br> -->
+
 
 <br><br><hr id="whyme"><br><br>
 
