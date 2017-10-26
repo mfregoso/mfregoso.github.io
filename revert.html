@@ -147,8 +147,8 @@ li {
 .s0 {background-color: #ffffff;} /* color for spacer + overall BG*/
 
 /* General Links */
-a, a:link, a:visited, a:active {color: #f3f3f3; text-decoration: underline;}
-a:hover {color: #f3f3f3; text-decoration: none; }
+a, a:link, a:visited, a:active {color: #000000; text-decoration: none;}
+a:hover {color: #1EAEDB; text-decoration: none; }
 
 /* Inverse link decoration */
 .inverse:link {text-decoration: none;}
@@ -168,13 +168,13 @@ a:hover {color: #f3f3f3; text-decoration: none; }
   width: 100%;
   height: 34px;
   line-height: 34px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   margin: 0 auto;
   text-align: center;
-  background-color: rgba(55, 55, 55, 0.95); /* 55,55,55/0.95 */
-  border-bottom: solid 2px;
-  border-top: solid 2px;
+  background-color: rgba(29, 29, 29, 0.98); /* 55,55,55/0.95 */
+  border-bottom: solid 1px;
+  border-top: solid 0px;
   border-color: black;
   font-size: 20px;
   font-weight: 400;
@@ -207,10 +207,14 @@ text-decoration: none;
     vertical-align: middle;
 	text-align: center;
     width: 100%;
-    height: 95%;
 	padding-top: 4rem;
-	min-height: 51rem;
+	min-height: 50rem;
 	background-color: white;}
+
+@media (min-width: 750px) {
+#splash {
+	height: 95%;}
+}
 
 #splinfo {
     display:table-cell;
@@ -224,7 +228,7 @@ text-decoration: none;
 .cwrap {
 width: 100%;
 padding-top: 7rem; /* 48px */
-padding-bottom: 7.2rem; /* 66px */
+padding-bottom: 7.5rem; /* 66px */
 }
 
 /* Transition triangle BLUE #0091cd */
@@ -233,23 +237,25 @@ padding-bottom: 7.2rem; /* 66px */
 .trans1:after {content: " "; position: absolute; bottom: -20px; left: 50%; margin-left: -25px; border-style: solid; border-width: 21px 25px 0 25px;
     border-color: white transparent transparent transparent;}
 
-.t1 {background-color: #34383B;}
+.t1 {background-color: #1D1D1D; background-image: url(img/bg-pattern.jpg); background-repeat: repeat;}
 .trans2 {
-    background-color: #34383B; width: 100%; height: 2px; position: relative;}
+    background-color: #1D1D1D; width: 100%; height: 2px; position: relative;}
 .trans2:after {content: " "; position: absolute; bottom: -20px; left: 50%; margin-left: -25px; border-style: solid; border-width: 21px 25px 0 25px;
-    border-color: #34383B transparent transparent transparent;}
+    border-color: #1D1D1D transparent transparent transparent;}
 
-.t2 {background-color: #759fcd;}
+.t2 {background-color: #f3f3f3;}
 .trans3 {
-    background-color: #759fcd; width: 100%; height: 2px; position: relative;}
+    background-color: #f3f3f3; width: 100%; height: 2px; position: relative;}
 .trans3:after {content: " "; position: absolute; bottom: -20px; left: 50%; margin-left: -25px; border-style: solid; border-width: 21px 25px 0 25px;
-    border-color: #759fcd transparent transparent transparent;}
+    border-color: #f3f3f3 transparent transparent transparent;}
 	
-.t3 {background-color: #34383B;}
+.t3 {background-color: #1C1C1C; background-image: url(img/bg-pattern.jpg); background-repeat: repeat;}
 .trans4 {
-    background-color: #34383B; width: 100%; height: 2px; position: relative;}
+    background-color: #1C1C1C; width: 100%; height: 0px; position: relative;}
 .trans4:after {content: " "; position: absolute; bottom: -20px; left: 50%; margin-left: -25px; border-style: solid; border-width: 21px 25px 0 25px;
-    border-color: #34383B transparent transparent transparent;}
+    border-color: #1C1C1C transparent transparent transparent;}
+	
+.t4 {background-color: #E2E2E2;}
 
 /* contact info & trickery */
 .container header {width: 100%; text-align: left; margin: 0 auto;}
@@ -283,8 +289,8 @@ span.linkarrow {position: relative; left: -1.1rem;}
 }
 
 .footer {
-background-color: #ffffff;
-color: #000000;
+background-color: #1C1C1C;
+color: #ffffff;
 width: 100%;
 padding-top: 2px;
 padding-bottom: 3px;
@@ -335,7 +341,7 @@ cursor: pointer;
 }
 
 a.morelink {color: black; text-decoration: none; border-radius: 4px; background-color: silver; padding: 0px 8px 0px 8px;}
-a.morelink:hover {background-color: #1EAEDB; color: white;}
+a.morelink:hover {color: white; background-color: #1EAEDB;}
 
 .morelink.less {display: none;}
 
@@ -356,9 +362,9 @@ color: white;
 
 <div id="menu">
 <a href="#home" title="Home">Home</a>
+<a href="#whyme" title="Why Me?">Why Me</a>
 <a href="#education" title="Education">Education</a>
 <a href="#skills" title="Skills">Skills</a>
-<a href="#whyme" title="Why Me?">Why Me?</a>
 <a href="#samples" title="Samples">Samples</a>
 </div>
 
@@ -382,26 +388,77 @@ Having extensive experience with computers, I offer a superior level of technica
 	</div>
 </div>
 
-<div class="trans1" id="education"></div>
+<div class="trans1" id="whyme"></div>
 
 <div class="cwrap t1 offwhite">
 	<div class="container">
 	<section>
 		
+<h2 class="title">So, Why Me?</h2><br>
+
+<!-- MOBILE WRAPPING POINTS: TITLE=86 chars & CONTENT=70 chars; if NO READMORE, then ~80 chars -->
+
+<div class="why big">
+<img src="img/whtarw.png" class="linkarrow">I am an excellent learner</div>
+<span class="more">Whether by instruction or independent effort, I will learn whatever is needed to succeed. I am equally capable with both methods, and self-study has become a strength of mine due to taking online courses and preparing for the CPA exam.&nbsp;</span>
+<br><br>
+
+<div class="why big"><!-- If something is attributable to me, it cannot be of shoddy quality. -->
+<img src="img/whtarw.png" class="linkarrow">I follow the motto, "Measure thrice, cut once"</div>
+<span class="more">My work is thorough and deliberate. I undertake careful preparations and never do anything haphazardly. Even under the pressure of deadlines, I maintain a high level of work quality and performance.&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/whtarw.png" class="linkarrow">Constraints bring out my creativity and resourcefulness</div>
+<span class="more">I am able to make do and even thrive in such environments. Instead of thinking, "This can't be done," I go straight to the issue of "How can this be achieved given the available resources?"&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/whtarw.png" class="linkarrow">I know when to ask for help</div>
+<span class="more">Usually I will try to find answers on my own. But in time-sensitive and other special situations, I will consult with superiors and colleagues.&nbsp;</span>
+<br><br>
+
+<div class="why big">
+<img src="img/whtarw.png" class="linkarrow">Problem-solving is always on my mind</div>
+<span class="more">From financial and technical to everyday issues, I am constantly thinking of potential improvements, solutions and workarounds.&nbsp;</span>
+<br><br>
+
+
+<!-- MOREBTN <div class="loadmorebtn">
+<span class="btnmore">Load More</span>
+	<div class="btnload">
+
+<div class="why big">
+<img src="img/whtarw.png" class="linkarrow">Title here</div>
+Base here, no space here.<span class="more">Expand.&nbsp;</span>
+<br><br>
+	</div>
+</div> -->
+
+		</section>
+	</div>
+</div>
+
+<div class="trans2" id="education"></div>
+
+<div class="cwrap t2 black">
+	<div class="container">
+		<section>
+
 <h2 class="title">Education</h2><br>
 
 IRS VITA Advanced<br>
 <span class="linkarrow">
-<img src="img/whtarw.png" class="linkarrow"><a target="_blank" href="https://sites.google.com/site/mfregosodotcom/vita.certificate.pdf">VITA/TCE Certificate</a></span><br>
+<img src="img/blkarw.png" class="linkarrow"><a target="_blank" href="https://sites.google.com/site/mfregosodotcom/vita.certificate.pdf">VITA/TCE Certificate</a></span><br>
 <span class="linkarrow">
-<img src="img/whtarw.png" class="linkarrow"><a class="fancybox" href="https://sites.google.com/site/mfregosodotcom/vita.exam.scores.png">Certification Test Scores</a></span>
+<img src="img/blkarw.png" class="linkarrow"><a class="fancybox" href="https://sites.google.com/site/mfregosodotcom/vita.exam.scores.png">Certification Test Scores</a></span>
 
 <br><br>
 
 CPA Exam<br>
 Wiley CPA Self-Study<br>
 <span class="linkarrow">
-<img src="img/whtarw.png" class="linkarrow"><a class="fancybox fancybox.iframe" href="csreport.html">CPA Exam Score Report</a></span>
+<img src="img/blkarw.png" class="linkarrow"><a class="fancybox fancybox.iframe" href="csreport.html">CPA Exam Score Report</a></span>
 
 <br><br>
 
@@ -418,9 +475,9 @@ Honors and Distinction in the Major
 	</div>
 </div>
 
-<div class="trans2" id="skills"></div>
+<div class="trans3" id="skills"></div>
 
-<div class="cwrap t2 black">
+<div class="cwrap t3 white">
 	<div class="container">
 		<section>
 
@@ -461,57 +518,6 @@ Honors and Distinction in the Major
 <li>&bull; Excellent written communication<li>
 <li>&bull; Bilingual in Spanish<li>
 </ul></div>
-
-		</section>
-	</div>
-</div>
-
-<div class="trans3" id="whyme"></div>
-
-<div class="cwrap t3 black">
-	<div class="container">
-		<section>
-
-<h2 class="title">So, Why Me?</h2><br>
-
-<!-- MOBILE WRAPPING POINTS: TITLE=86 chars & CONTENT=70 chars; if NO READMORE, then ~80 chars -->
-
-<div class="why big">
-<img src="img/blkarw.png" class="linkarrow">I am an excellent learner</div>
-<span class="more">Whether by instruction or independent effort, I will learn whatever is needed to succeed. I am equally capable with both methods, and self-study has become a strength of mine due to taking online courses and preparing for the CPA exam.&nbsp;</span>
-<br><br>
-
-<div class="why big"><!-- If something is attributable to me, it cannot be of shoddy quality. -->
-<img src="img/blkarw.png" class="linkarrow">I follow the motto, "Measure thrice, cut once"</div>
-<span class="more">My work is thorough and deliberate. I undertake careful preparations and never do anything haphazardly. Even under the pressure of deadlines, I maintain a high level of work quality and performance.&nbsp;</span>
-<br><br>
-
-<div class="why big">
-<img src="img/blkarw.png" class="linkarrow">Constraints bring out my creativity and resourcefulness</div>
-<span class="more">I am able to make do and even thrive in such environments. Instead of thinking, "This can't be done," I go straight to the issue of "How can this be achieved given the available resources?"&nbsp;</span>
-<br><br>
-
-<div class="why big">
-<img src="img/blkarw.png" class="linkarrow">I know when to ask for help</div>
-<span class="more">Usually I will try to find answers on my own. But in time-sensitive and other special situations, I will consult with superiors and colleagues.&nbsp;</span>
-<br><br>
-
-<div class="why big">
-<img src="img/blkarw.png" class="linkarrow">Problem-solving is always on my mind</div>
-<span class="more">From financial and technical to everyday issues, I am constantly thinking of potential improvements, solutions and workarounds.&nbsp;</span>
-<br><br>
-
-
-<!-- MOREBTN <div class="loadmorebtn">
-<span class="btnmore">Load More</span>
-	<div class="btnload">
-
-<div class="why big">
-<img src="img/blkarw.png" class="linkarrow">Title here</div>
-Base here, no space here.<span class="more">Expand.&nbsp;</span>
-<br><br>
-	</div>
-</div> -->
 
 		</section>
 	</div>
