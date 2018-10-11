@@ -268,11 +268,14 @@ a:hover {
 
 /* Inverse link decoration */
 
-.inverse:link {
+.inverse:link,
+.inverse:visited {
+  color: #ffffff;
   text-decoration: none;
 }
 
 .inverse:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -505,7 +508,7 @@ h4.contact {
 
   .logo {
     width: 14rem;
-    padding-bottom: 4rem;
+    padding-bottom: 4.4rem;
   }
 }
 
