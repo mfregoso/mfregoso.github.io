@@ -481,10 +481,19 @@ h4.contact {
   letter-spacing: -0.05rem;
 }
 
+.logo {
+  width: 10rem;
+  padding-bottom: 3rem;
+}
+
 @media (min-width: 550px) {
   /* phablet */
   h4.contact {
     font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 12.5rem;
   }
 }
 
@@ -493,10 +502,15 @@ h4.contact {
   h4.contact {
     font-size: 3rem;
   }
+
+  .logo {
+    width: 14rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .title {
-  width: 100%;
+  width: 90%;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 1rem;
@@ -680,4 +694,9 @@ a.morelink:hover {
 hr {
   background-color: white;
   border-color: white;
+}
+
+.guests {
+  position: absolute;
+  top: -200px;
 }
