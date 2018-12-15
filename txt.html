@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Manipulation</title>
+  </head>
+  <body>
+    <h1 id="header">Demo @ TXT Hackathon</h1>
+    <table id="table">
+      <tr>
+        <td id="title"><h2>Title: Javascript Test</h2></td>
+      </tr>
+
+      <tr>
+        <td>
+          <strong id="innertest">Creating <em>a Basic</em> JavaScript</strong>
+        </td>
+      </tr>
+    </table>
+
+    <div id="testing">
+      Please don't <span>remove me</span><br />
+      <a href="javscript:(void);" onclick="hello();" id="linkme"
+        >Alert box with title text</a
+      >
+      <br /><img
+        src="/broke.jpg"
+        alt="pick a color"
+        width="30"
+        height="20"
+        onclick="pickColor();"
+      />
+      <br /><input type="button" value="click here" onclick="newBG('red');" />
+      <br /><input
+        type="text"
+        size="30"
+        id="upcolor"
+        placeholder="Enter a number between 1-100"
+      />
+      <br /><input
+        type="text"
+        size="30"
+        id="required"
+        placeholder="This box should not be empty!"
+      />
+      <br /><input
+        type="text"
+        size="30"
+        value="Turns red on focus"
+        onfocus="this.style.backgroundColor='red';"
+      />
+      <br /><input
+        type="button"
+        value="Check if Box #2 is empty"
+        onclick="checkVal();"
+      />
+      <br /><input
+        type="button"
+        value="Pop with value of Box #2"
+        onclick="alert(document.getElementById('required').value);"
+      />
+      <br /><a href="javascript: rewrite();">Text replace with innerHTML.</a>
+      <br /><input
+        type="button"
+        value="Show innerHTML of #table"
+        onclick="alert(document.getElementById('table').innerHTML);"
+      />
+      <br /><input
+        type="button"
+        value="Text nodeValue"
+        onclick="alert(document.querySelector('#innertest').childNodes[1].firstChild.nodeValue);"
+      />
+      <br /><input
+        type="button"
+        value="overwrite Title"
+        onclick="document.querySelector('title').textContent='new title';"
+      />
+      <br /><a href="javascript:appthis();">Append a JS-created child</a>
+      <br /><input
+        type="button"
+        value="remove Child"
+        onclick="rem.removeChild(rem.firstChild);"
+      />
+      <br /><input
+        type="button"
+        value="Create/append clone of this DIV"
+        onclick="rem.parentNode.appendChild(clonediv);"
+      />
+      <br /><input type="button" value="test JS handler" id="catchme" />
+    </div>
+
+    <script>
+      document.getElementById("upcolor").oninput = updateBG;
+      function updateBG() {
+        var newopa = document.getElementById("upcolor").value / 100;
+        document
+          .getElementById("header")
+          .setAttribute(
+            "style",
+            `background-color: rgba(255, 0, 0, ${newopa})`
+          );
+      }
+
+      document.getElementById("catchme").onclick = appthis;
+
+      let rem = document.getElementById("testing");
+
+      let clonediv = document.createElement("div");
+      clonediv.innerHTML = document.getElementById("testing").innerHTML;
+
+      let numbers = 0,
+        apptext = "xtra";
+      function appthis() {
+        let newpara = document.createElement("p");
+        newpara.setAttribute("class", "success");
+        newpara.innerHTML = `<a href="#">This is clone test #${numbers} ${apptext}</a>`;
+        document.getElementById("testing").appendChild(newpara);
+        numbers++;
+      }
+
+      function hello() {
+        var attri = document.getElementById("header").textContent;
+        alert(attri);
+      }
+      function newBG(color) {
+        document.getElementById("title").style.backgroundColor = color;
+      }
+      function pickColor() {
+        var newcolor = prompt("Enter a desired color");
+        document.getElementById("title").style.backgroundColor = newcolor;
+      }
+      // make text box red if it has NO VALUE
+      function checkVal() {
+        var reqbox = document.getElementById("required");
+        if (reqbox.value === "") {
+          reqbox.style.backgroundColor = "red";
+        } else {
+          reqbox.style.backgroundColor = "white";
+        }
+      }
+      // rewrite text based on ID
+      function rewrite() {
+        var extra = '&nbsp;<a href="#">LINK!</a>';
+        document.getElementById("innertest").innerHTML =
+          "This got overwritten" + extra;
+      }
+      // loop through all <td> and add a class or perform any other action on each
+      function addClass() {
+        var tds = document.getElementsByTagName("td");
+        for (let i = 0; i < tds.length; i++) {
+          tds[i].className = "redbg"; // .style.visibility = 'hidden'; if you want to HIDE all <td> elms
+        }
+      }
+    </script>
+  </body>
+</html>
