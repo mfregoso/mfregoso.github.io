@@ -596,6 +596,31 @@ span.linkarrow {
   left: -1.3rem;
 }
 
+/* screenshot images */
+.showcase {
+  text-align: center;
+  margin: 2.5em 0 0.5em 0;
+}
+.showcase .showcase-img {
+  display: block;
+  border-radius: 2.5%;
+  width: 100%;
+  margin: 0 auto 0.4em auto;
+}
+
+@media (min-width: 550px) {
+  .showcase .showcase-img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 750px) {
+  .showcase .showcase-img {
+    border-radius: 1%;
+    width: 70%;
+  }
+}
+
 /* indent wrapped text:: check on mobile */
 
 @media (min-width: 750px) {
