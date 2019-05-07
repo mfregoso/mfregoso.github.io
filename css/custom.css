@@ -661,9 +661,6 @@ span.linkarrow {
 
 /** BUTTON LOAD MORE **/
 
-.loadmorebtn {
-}
-
 .btnmore {
   cursor: pointer;
   text-decoration: none;
@@ -720,12 +717,7 @@ a.morelink:hover {
   display: none;
 }
 
-hr {
-  background-color: white;
-  border-color: white;
-}
-
 .guests {
-  position: absolute;
-  top: -200px;
+  position: fixed;
+  top: -2000px;
 }
