@@ -54,6 +54,10 @@ hr {
   height: 0;
 }
 
+sup {
+  font-size: 0.3em;
+}
+
 /* ##### Grid ##### */
 
 .container {
