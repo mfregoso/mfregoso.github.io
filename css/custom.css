@@ -550,7 +550,7 @@ span.linkarrow {
 
 @media (min-width: 750px) {
   img.linkarrow {
-    padding-right: 3px;
+    /* padding-right: 3px; */
     width: 1.6rem;
     height: 1.6rem;
   }
