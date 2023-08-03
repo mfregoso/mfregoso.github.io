@@ -1,0 +1,642 @@
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header,
+section {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+sup {
+  font-size: 0.3em;
+}
+
+/* ##### Grid ##### */
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  /* 2rem also works */
+  box-sizing: border-box;
+}
+
+/* column removed here */
+
+/* For devices larger than 400px */
+
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+}
+
+/* For devices larger than 550px */
+
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+  /* ALL column stuff removed */
+}
+
+/* all REM measurements are based on 10px sizing. e.g. 1.5rem = 15px */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: Raleway, "Century Gothic", "Avant Garde", Arial;
+}
+
+/* Typography Sizes */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;} */
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -0.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+/* Larger than phablet */
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  h5 {
+    font-size: 2.4rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Lists */
+
+ul {
+  list-style: disc inside;
+}
+
+/* prior circle */
+
+ol {
+  list-style: decimal inside;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 0rem;
+}
+
+/* prior 1rem */
+
+.container {
+  max-width: 760px;
+  min-width: 320px;
+}
+
+/* bigger CONTENT FONT for desktops */
+
+@media (min-width: 750px) {
+  .container section {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+/* classes of color */
+
+.offwhite {
+  color: #f3f3f3;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #000000;
+}
+
+.darkgray {
+  color: #34383b;
+}
+
+.borange {
+  background-color: #e56e5c;
+}
+
+/* cyan: #1F8DD6; */
+
+.ablue {
+  background-color: #759fcd;
+}
+
+.s0 {
+  background-color: #ffffff;
+}
+
+/* color for spacer + overall BG*/
+
+/* General Links */
+
+a,
+a:link,
+a:visited,
+a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1eaedb;
+  text-decoration: none;
+}
+
+/* Inverse link decoration */
+
+.inverse:link,
+.inverse:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.inverse:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* navbar-menu disabled for mobile devices */
+
+#menu {
+  display: none;
+}
+
+@media (min-width: 750px) {
+  #menu {
+    display: block;
+    position: fixed;
+    min-width: 500px;
+    left: 0%;
+    top: 0;
+    width: 100%;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(29, 29, 29, 0.98);
+    /* 55,55,55/0.95 */
+    border-bottom: solid 1px;
+    border-top: solid 0px;
+    border-color: black;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: white;
+    z-index: 100;
+  }
+}
+
+#menu a {
+  color: #f3f3f3;
+  line-height: 4rem;
+  display: inline-block;
+  text-align: center;
+  height: 4rem;
+  border: 0;
+  padding: 0px 1.5rem 0px 1.5rem;
+  margin: 0 auto;
+  margin-right: 0.6rem;
+  margin-left: 0.6rem;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#splash {
+  display: table;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  padding-top: 4rem;
+  height: 58rem;
+  background-color: white;
+}
+
+@media (min-width: 750px) {
+  #splash {
+    min-height: 51rem;
+    height: 95%;
+  }
+}
+
+#splash_info {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 100% width BG color wrapper */
+
+.cwrap {
+  width: 100%;
+  padding-top: 7rem;
+  /* 48px */
+  padding-bottom: 7.5rem;
+  /* 66px */
+}
+
+/* Transition triangle BLUE #0091cd */
+
+.trans1 {
+  background-color: white;
+  width: 100%;
+  height: 2px;
+  position: relative;
+}
+
+.trans1:after {
+  content: " ";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -25px;
+  border-style: solid;
+  border-width: 21px 25px 0 25px;
+  border-color: white transparent transparent transparent;
+}
+
+.t1 {
+  background-color: #1d1d1d;
+  background-image: url("../img/bg-pattern.jpg");
+  background-repeat: repeat;
+}
+
+.trans2 {
+  background-color: #1d1d1d;
+  width: 100%;
+  height: 0px;
+  position: relative;
+}
+
+.trans2:after {
+  content: " ";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -25px;
+  border-style: solid;
+  border-width: 21px 25px 0 25px;
+  border-color: #1d1d1d transparent transparent transparent;
+}
+
+.t2 {
+  background-color: #f3f3f3;
+}
+
+.trans3 {
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 5px;
+  position: relative;
+}
+
+.trans3:after {
+  content: " ";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -25px;
+  border-style: solid;
+  border-width: 21px 25px 0 25px;
+  border-color: #f3f3f3 transparent transparent transparent;
+}
+
+.t3 {
+  background-color: #1d1d1d;
+  background-image: url("../img/bg-pattern.jpg");
+  background-repeat: repeat;
+}
+
+.trans4 {
+  background-color: #1d1d1d;
+  width: 100%;
+  height: 0px;
+  position: relative;
+}
+
+.trans4:after {
+  content: " ";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -25px;
+  border-style: solid;
+  border-width: 21px 25px 0 25px;
+  border-color: #1d1d1d transparent transparent transparent;
+}
+
+.t4 {
+  background-color: #f3f3f3;
+}
+
+/* contact info & trickery */
+
+.container header {
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+pre {
+  display: none;
+}
+
+.code {
+  display: none;
+}
+
+h4.contact {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+}
+
+.logo {
+  width: 10rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 550px) {
+  /* phablet */
+  h4.contact {
+    font-size: 2.5rem;
+  }
+
+  .logo {
+    width: 12.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  /* tablet */
+  h4.contact {
+    font-size: 3rem;
+  }
+
+  .logo {
+    width: 14rem;
+    padding-bottom: 4.4rem;
+    margin-top: 5rem;
+  }
+}
+
+.title {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+#splash_info_divider {
+  height: 1px;
+  size: 1px;
+  background-color: #34383b;
+  border: 1px;
+  border-color: #34383b;
+  width: 95%;
+  max-width: 52rem;
+  margin: 2.4rem auto 2.4rem auto;
+}
+
+/* responsive arrow size & position */
+
+img.linkarrow {
+  padding-right: 2px;
+  width: 1rem;
+  height: 1rem;
+}
+
+span.linkarrow {
+  position: relative;
+  left: -1.1rem;
+}
+
+@media (min-width: 750px) {
+  img.linkarrow {
+    /* padding-right: 3px; */
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  span.linkarrow {
+    position: relative;
+    left: -1.8rem;
+  }
+}
+
+/* list small indentation */
+
+.lsin {
+  padding: 0 0 0 0px;
+}
+
+.lsin li {
+  list-style: none;
+}
+
+.lsin ul li {
+  text-indent: -1.1rem;
+  padding-left: 1.1rem;
+}
+
+/* indent wrapped text:: check on mobile */
+
+@media (min-width: 750px) {
+  .lsin ul li {
+    text-indent: -1.4rem;
+    padding-left: 1.4rem;
+  }
+}
+
+.footer {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  text-align: center;
+}
+
+/* screenshot images */
+.showcase {
+  text-align: center;
+  margin: 2.5em 0 0.5em 0;
+}
+.showcase .showcase-img {
+  display: block;
+  border-radius: 2.5%;
+  width: 100%;
+  margin: 0 auto 0.4em auto;
+}
+
+@media (min-width: 550px) {
+  .showcase .showcase-img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 750px) {
+  .showcase .showcase-img {
+    border-radius: 1%;
+    width: 70%;
+  }
+}
+
+/* indent wrapped text */
+
+.why {
+    text-indent: -1.2rem;
+    padding-left: 1.2rem;
+    position: relative;
+    left: -1.3rem;
+}
+
+@media (min-width: 750px) {
+  .why {
+    text-indent: -2rem;
+    padding-left: 2rem;
+    position: relative;
+    left: -1.8rem;
+  }
+}
+
+.guests {
+  position: fixed;
+  top: -2000px;
+}
